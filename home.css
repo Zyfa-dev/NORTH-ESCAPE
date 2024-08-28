@@ -65,6 +65,9 @@ h6 {
 .hov_layer {
   border-bottom: 1px solid grey;
 }
+.nav_btn{
+  display: none;
+}
 #exit {
   height: 22px;
   width: 22px;
@@ -113,6 +116,9 @@ h6 {
   font-size: 12px;
   padding-right: 40px;
   font-weight: 300;
+}
+.third-res{
+  display: none;
 }
 .download_arr {
   font-weight: 200;
@@ -884,10 +890,36 @@ footer {
   /* .nav_top_arrow,.h4_arrow,.full_layer{
         display: none;
     } */
-  .lang,
-  .third,
+  .lang,.third,
   .message {
     display: none;
+  }
+  .third-res{
+    height: 235px;
+    position: absolute;
+    top: -180px;
+    left: 0px;
+    z-index: 5;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    background-color: #c1c1c1;
+    width: 100%;
+  }
+  .third-2{
+    color: #000000;
+    padding-left: 150px;
+    /* width: 20%; */
+    height: 100%;
+    margin: 0px 0px;
+    padding-top: 15px;
+
+  }
+  .third-2:hover{
+    background-color: #003b5c;
+    color: #ffffff;
+
   }
   .navbar {
     display: flex;
@@ -895,13 +927,22 @@ footer {
     height: 70px;
     width: 100%;
     z-index: 10;
+    position: relative;
     align-items: center;
+    background-color: #ffffff;
     border-bottom: 1px solid rgba(170, 170, 170, 0.608);
     box-shadow: 0px 1px 10px rgba(186, 184, 184, 0.58);
   }
   .nav_left,
   .nav_right {
     padding: 20px;
+    z-index: 10;
+  }
+  .nav_left{
+    flex: 1.2;
+  }
+  .nav_right{
+    flex: 1;
   }
   .web_img {
     height: 25px !important;
@@ -917,9 +958,18 @@ footer {
     justify-content: space-between;
     gap: 10px;
   }
-  .profile {
-    display: block;
+  .profile { 
+    
+    display: none;
     font-size: 23px;
+  }
+  .nav_btn{
+    display: block;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(224, 224, 224);
+    height: 30px;
+    width: 40px;
   }
 
   .third-3 {

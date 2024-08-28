@@ -1,4 +1,4 @@
-
+//box open on click
 var navbar = document.getElementById('nav-js')
 var nav_click=document.querySelector('.hov_nav')
 var body=document.querySelector('body')
@@ -21,16 +21,29 @@ window.addEventListener('click',(e)=>{
     })
 
 
+//navbar transition on click btn
+var nav_responsive=document.querySelector('.third-res')
+nav_responsive.style.top='-180px'
+function navshow() {
+    if(nav_responsive.style.top=='-180px'){
+        nav_responsive.style.top='70px'
+        nav_responsive.style.transition='all 0.6s ease-in-out'
+    }
+    else{
+        nav_responsive.style.top='-180px'
+    }
+
+    
+}
 
 
-
-
+//slider 1
 var prev=document.getElementById('back_prev')
 var next=document.getElementById('next')
 var cards=document.getElementById('cards')
 var no_img=document.querySelectorAll('#image').length
 var currentvalue=0
-console.log(no_img);
+// console.log(no_img);
 
 
 function slide_img(){
