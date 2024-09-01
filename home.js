@@ -313,4 +313,18 @@ btn_prev_2.addEventListener('click',()=>{
     result_resort_3()
 })
 
+const qna = document.querySelectorAll('.qna');
+qna.forEach((box)=>{
+    var ans=box.querySelector('.answers')
+    var qna_flex=box.querySelector('.qna-flex')
+    qna_flex.addEventListener('click',()=>{
+        if(!(ans.style.display=='none')){
+        ans.style.display='none'
+    }
+    else{
+        ans.style.display='block'      
+    }
+    })
 
+
+})
