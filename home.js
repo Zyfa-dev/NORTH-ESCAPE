@@ -5,14 +5,12 @@ var body=document.querySelector('body')
 var nav_show=document.querySelector('.full_layer')
 var exit=document.getElementById('exit')
 
-function showbox(){
 
 nav_click.addEventListener('click',(e)=>{
     nav_show.style.display=`block`
     e.stopPropagation()
     // nav_show.style.background=`rgba(0,0,0,0.4)`
     })
-}
 window.addEventListener('click',(e)=>{
     if (e.target !== nav_click && e.target !== nav_show 
         && !nav_show.contains(e.target)) {
@@ -35,6 +33,7 @@ function navshow() {
 
     
 }
+document.querySelector('.nav_btn').addEventListener('click', navshow);
 
 
 //slider 1
@@ -317,12 +316,21 @@ const qna = document.querySelectorAll('.qna');
 qna.forEach((box)=>{
     var ans=box.querySelector('.answers')
     var qna_flex=box.querySelector('.qna-flex')
-    qna_flex.addEventListener('click',()=>{
-        if(!(ans.style.display=='none')){
-        ans.style.display='none'
+    var btn_down=box.querySelector('.btn-qna')
+    var btn_up=box.querySelector('.btn-up')
+
+    qna_flex.addEventListener('click',(e)=>{
+        e.stopPropagation()
+        if(ans.style.height=='0px' || ans.style.height === ''){
+        ans.style.height='70px'
+        btn_down.style.display='none'
+        btn_up.style.display='block'
+
     }
     else{
-        ans.style.display='block'      
+        ans.style.height='0px'   
+        btn_down.style.display='block'
+        btn_up.style.display='none'  
     }
     })
 

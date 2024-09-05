@@ -54,6 +54,7 @@ h6 {
   flex-direction: column;
   width: 350px;
   position: absolute;
+  /* top: -20px; */
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   border: 1px solid grey;
@@ -902,10 +903,16 @@ p {
   font-weight: bolder;
 }
 .answers{
-  display: none;
-  padding: 20px 10px 20px 0px;
+  /* display: none; */
+  height: 0px;
+  overflow: hidden;
+  /* border: 2px solid red; */
+  /* padding: 20px 10px 20px 0px; */
   transition: all 0.5s ease-in-out;
   font-size: 21px;
+}
+.btn-up{
+  display: none;
 }
 
 footer {
@@ -924,7 +931,7 @@ footer {
   margin: 0%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 450px ) {
   .hov_nav {
     display: none;
   }
@@ -1513,13 +1520,17 @@ footer {
   width: 85%;
 }
 .frequtly{
-  font-size: 27px;
+  font-size: 25px;
   font-weight: bolder;
   width: 90%;
 }
 .questions{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bolder;
+}
+.answers{
+  font-weight: lighter;
+  font-size: 14px;
 }
 .foot {
     background-color: #00355f;
